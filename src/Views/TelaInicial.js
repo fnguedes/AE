@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
 import { Image } from 'react-native'
 import hollow from "../../assets/1254807.jpg"
@@ -10,6 +10,7 @@ export default function TelaInicial() {
   return (
     <View>
       <Text>TelaInicial</Text>
+      <StatusBar />
         <IconeCaderno fill={"#000"} width={60} height={60}  />
         <IconeCadernoAtivo  width={60} height={60}  />
       

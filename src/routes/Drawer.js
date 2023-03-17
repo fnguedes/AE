@@ -16,41 +16,50 @@ const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {
   return (
-    <Drawer.Navigator initialRouteName='Aulas' 
-      screenOptions={{drawerStyle:{backgroundColor:"#181818"}, 
-                      drawerActiveTintColor:"#0BF0FF",
-                      drawerInactiveTintColor:"#fff",
-                      drawerActiveBackgroundColor:"#181818"
-                      
-                      }}>
-      <Drawer.Screen name="Aulas" component={TI} 
-                     options={{drawerIcon:({focused})=>(
-                      focused ? <IHA width={20} height={20} style={{marginRight:-23}} /> :
-                                <IH width={20} height={20} style={{marginRight:-23}}/>
-                     )
 
-                    }}/>
-      <Drawer.Screen name="Cadernos" component={TC} 
-                     options={{drawerIcon:({focused})=>(
-                      focused ? <ICA width={20} height={20} style={{marginRight:-23}} /> :
-                                <IC width={20} height={20} style={{marginRight:-23}}/>
-                     )
+    <Drawer.Navigator initialRouteName='Aulas'
+      screenOptions={{
+        drawerStyle: { backgroundColor: "#181818", width: 180,marginBottom:-20},
+        drawerActiveTintColor: "#0BF0FF",
+        drawerInactiveTintColor: "#fff",
+        drawerActiveBackgroundColor: "#1818ff",
+        drawerHideStatusBarOnOpen: true,
+        drawerLabelStyle:{fontSize:17,fontWeight:'bold',height:19},
+        
+      }}>
 
-                    }}/>
-      <Drawer.Screen name="Matérias" component={TM} 
-                     options={{drawerIcon:({focused})=>(
-                      focused ? <IMA width={20} height={20} style={{marginRight:-23}} /> :
-                                <IM width={20} height={20} style={{marginRight:-23}}/>
-                     )
+      <Drawer.Screen name="Aulas" component={TI}
+        options={{
+          drawerIcon: ({ focused }) => (
+            focused ? <IHA width={25} height={25} style={{ marginRight: -23 }} /> :
+              <IH width={25} height={25} style={{ marginRight: -23 }} />
+          )
+        }} />
 
-                    }}/>
-      <Drawer.Screen name="Tarefas" component={TT} 
-                     options={{drawerIcon:({focused})=>(
-                      focused ? <ITA width={20} height={20} style={{marginRight:-23}} /> :
-                                <IT width={20} height={20} style={{marginRight:-23}}/>
-                     )
+      <Drawer.Screen name="Matérias" component={TM}
+        options={{
+          drawerIcon: ({ focused }) => (
+            focused ? <IMA width={25} height={25} style={{ marginRight: -23 }} /> :
+              <IM width={25} height={25} style={{ marginRight: -23 }} />
+          )
+        }} />
 
-                    }}/>
+      <Drawer.Screen name="Cadernos" component={TC}
+        options={{
+          drawerIcon: ({ focused }) => (
+            focused ? <ICA width={25} height={25} style={{ marginRight: -23 }} /> :
+              <IC width={25} height={25} style={{ marginRight: -23 }} />
+          ),
+        }} />
+
+      <Drawer.Screen name="Tarefas" component={TT}
+        options={{
+          drawerIcon: ({ focused }) => (
+            focused ? <ITA width={25} height={25} style={{ marginRight: -23 }} /> :
+              <IT width={25} height={25} style={{ marginRight: -23 }} />
+          )
+        }} />
+
     </Drawer.Navigator>
   );
 }
