@@ -1,18 +1,61 @@
-import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TI from '../Views/TelaInicial'
 import TC from '../Views/TelaCaderno'
 import TM from '../Views/TelaMaterias';
 import TT from '../Views/TelaTarefa';
-import IH from '../../assets/IconeHome.svg'
-import IHA from '../../assets/IconeHomeAtivo.svg'
-import IM from '../../assets/IconeMateria.svg'
-import IMA from '../../assets/IconeMateriaAtivo.svg'
-import IC from '../../assets/IconeCaderno.svg'
-import ICA from '../../assets/IconeCadernoAtivo.svg'
-import IT from '../../assets/IconeTarefas.svg'
-import ITA from '../../assets/IconeTarefasAtivo.svg'
+import { TabButtonCaderno, TabButtonHome, TabButtonMateria, TabButtonTarefa } from '../Components/TabButton'
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
+
+export default function MyTab() {
+  return (
+    <Tab.Navigator initialRouteName="Aulas"
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: "#312f2f",
+        },
+        headerShown: false,
+        tabBarShowLabel: false,
+      }}
+    >
+
+      <Tab.Screen name="Aulas" component={TI}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButtonHome ativo={focused} />
+          )
+      }}
+      />
+
+      <Tab.Screen name="Matérias" component={TM}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButtonMateria ativo={focused} />
+          )
+        }}
+      />
+
+      <Tab.Screen name="Cadernos" component={TC}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButtonCaderno ativo={focused} />
+          )
+        }}
+      />
+
+      <Tab.Screen name="Tarefas" component={TT}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButtonTarefa ativo={focused} />
+          )
+        }}
+      />
+
+    </Tab.Navigator>
+  )
+}
+
+/*const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {
   return (
@@ -25,7 +68,6 @@ export default function MyDrawer() {
         drawerActiveBackgroundColor: "#1818ff",
         drawerHideStatusBarOnOpen: true,
         drawerLabelStyle:{fontSize:17,fontWeight:'bold',height:19},
-        
       }}>
 
       <Drawer.Screen name="Aulas" component={TI}
@@ -63,3 +105,4 @@ export default function MyDrawer() {
     </Drawer.Navigator>
   );
 }
+*/

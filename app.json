@@ -17,14 +17,23 @@
     "ios": {
       "supportsTablet": true
     },
+    "androidNavigationBar": {
+      "visible": "immersive"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tyui_liru.AE"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "06f9e9d3-51f6-4d3b-b724-bdeafd452ee2"
+      }
     }
   }
 }
