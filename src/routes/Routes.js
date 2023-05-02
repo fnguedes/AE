@@ -3,7 +3,8 @@ import TI from '../Views/TelaInicial'
 import TC from '../Views/TelaCaderno'
 import TM from '../Views/TelaMaterias';
 import TT from '../Views/TelaTarefa';
-import { TabButtonCaderno, TabButtonHome, TabButtonMateria, TabButtonTarefa } from '../Components/TabButton'
+import TP from '../Views/TelaPerfil'
+import { TabButtonCaderno, TabButtonHome, TabButtonMateria, TabButtonPerfil, TabButtonTarefa } from '../Components/TabButton'
 
 const Tab = createBottomTabNavigator();
 
@@ -18,13 +19,12 @@ export default function MyTab() {
         tabBarShowLabel: false,
       }}
     >
-
-      <Tab.Screen name="Aulas" component={TI}
+      <Tab.Screen name="Cadernos" component={TC}
         options={{
           tabBarIcon: ({ focused }) => (
-            <TabButtonHome ativo={focused} />
+            <TabButtonCaderno ativo={focused} />
           )
-      }}
+        }}
       />
 
       <Tab.Screen name="Matérias" component={TM}
@@ -35,10 +35,10 @@ export default function MyTab() {
         }}
       />
 
-      <Tab.Screen name="Cadernos" component={TC}
+      <Tab.Screen name="Aulas" component={TI}
         options={{
           tabBarIcon: ({ focused }) => (
-            <TabButtonCaderno ativo={focused} />
+            <TabButtonHome ativo={focused} />
           )
         }}
       />
@@ -47,6 +47,14 @@ export default function MyTab() {
         options={{
           tabBarIcon: ({ focused }) => (
             <TabButtonTarefa ativo={focused} />
+          )
+        }}
+      />
+
+      <Tab.Screen name="Perfil" component={TP}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabButtonPerfil ativo={focused} />
           )
         }}
       />

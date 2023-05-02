@@ -1,17 +1,26 @@
-import { View, Text } from 'react-native'
+import { View ,Text} from 'react-native'
 import React from 'react'
-
+import style from '../Style/styleHeader'
+import BtHeader from './ButtonHeader'
 export default function Header() {
   return (
-    <View>
+    <View style={style.container}>
+      
+      <View style={style.containerTitulo} >
 
-      <View style={style.header}>
-        <TouchableOpacity style={style.perfil}>
+        <Text style={style.txtTitulo}>Horários</Text>
 
-        </TouchableOpacity>
       </View>
+      
+      <View style={style.containerDias}>
 
-      <View style={style.traco}>
+        <BtHeader>SEG</BtHeader>
+        <BtHeader>TER</BtHeader>
+        <BtHeader>QUA</BtHeader>
+        <BtHeader>QUI</BtHeader>
+        <BtHeader>SEX</BtHeader>
+        <BtHeader>SÁB</BtHeader>
+        <BtHeader>DOM</BtHeader>
 
       </View>
     </View>
