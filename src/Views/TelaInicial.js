@@ -8,8 +8,8 @@ export default function TelaInicial() {
   return (
     <View style={style.container}>
       
-      <Header/>
-      <Text>TelaInicial</Text>
+      {/* <Header/> */}
+      
     </View>
   )
 }

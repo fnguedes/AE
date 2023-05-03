@@ -9,8 +9,8 @@ import IC from '../../assets/IconeCaderno.svg'
 import ICA from '../../assets/IconeCadernoAtivo.svg'
 import IT from '../../assets/IconeTarefas.svg'
 import ITA from '../../assets/IconeTarefasAtivo.svg'
-import IP from '../../assets/IconePerfil'
-import IPA from '../../assets/IconePerfilAtivo'
+import IP from '../../assets/IconePerfil.svg'
+import IPA from '../../assets/IconePerfilAtivo.svg'
 
 export function TabButtonHome(props) {
   return (
