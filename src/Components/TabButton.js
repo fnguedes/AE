@@ -14,9 +14,9 @@ import IPA from '../../assets/IconePerfilAtivo.svg'
 
 export function TabButtonHome(props) {
   return (
-    <View style={props.ativo ? style.containerCentralAtivo : style.containerCentralInativo}>
-      <View style={style.ButtonTabCentral}>
-        {props.ativo?<IHA width={58} height={58} />:<IH width={45} height={45} />}
+    <View style={props.ativo ? style.containerAtivo : style.containerInativo}>
+      <View style={style.ButtonTab}>
+        {props.ativo?<IHA width={48} height={48} />:<IH width={43} height={43} />}
       </View>
     </View>
   )

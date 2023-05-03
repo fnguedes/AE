@@ -4,7 +4,7 @@ export default StyleSheet.create({
     container: {
         backgroundColor: "#181818",
         width:'100%',
-        height:'10%'
+        height:'7%'
     },
     containerDias: {
         backgroundColor: "#0f0",
@@ -15,8 +15,7 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     containerTitulo:{
-        width:'100%',
-        height:'75%',
+        flex:1,
         justifyContent:'center',
         alignItems:'center'
     },
