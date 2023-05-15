@@ -10,14 +10,14 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function MyTabs() {
   return (
-    <Tab.Navigator initialRouteName="SEG">
+    <Tab.Navigator initialRouteName="DOM">
+      <Tab.Screen name="DOM" component={Dom} />
       <Tab.Screen name="SEG" component={Seg} />
       <Tab.Screen name="TER" component={Ter} />
       <Tab.Screen name="QUA" component={Qua} />
       <Tab.Screen name="QUI" component={Qui} />
       <Tab.Screen name="SEX" component={Sex} />
       <Tab.Screen name="SAB" component={Sab} />
-      <Tab.Screen name="DOM" component={Dom} />
     </Tab.Navigator>
   );
 }

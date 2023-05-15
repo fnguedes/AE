@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import style from '../Style/styleTab'
+import style from './Style/styleTab'
 import IH from '../../assets/IconeHome.svg'
 import IHA from '../../assets/IconeHomeAtivo.svg'
 import IM from '../../assets/IconeMateria.svg'

@@ -1,12 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import style from '../Style/styleTelaPerfil'
-
-export default function TelaPerfil() {
+import style from './Style/styleTelaMateria'
+export default function TelaMaterias() {
   return (
-
     <View style={style.container}>
-      <Text>TelaPerfil</Text>
+      <Text>TelaMaterias</Text>
     </View>
   )
 }

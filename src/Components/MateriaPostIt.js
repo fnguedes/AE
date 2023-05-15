@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import style from '../Style/stylePostIt'
+import style from './Style/stylePostIt'
 
 export default function PostIt() {
     return (

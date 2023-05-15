@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import PostIt from '../../Components/MateriaPostIt';
-import style from '../../Style/styleWeek'
+import style from './Style/styleWeek'
 
 export default function Segunda(){
     return(

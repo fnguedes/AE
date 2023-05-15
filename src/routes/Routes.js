@@ -1,12 +1,45 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import TI from '../Views/TelaInicial'
-import TC from '../Views/TelaCaderno'
-import TM from '../Views/TelaMaterias';
-import TT from '../Views/TelaTarefa';
-import TP from '../Views/TelaPerfil'
+import { createStackNavigator } from '@react-navigation/stack';
+import TI from '../Views/TelasIniciais/TelaInicial'
+import TCs from '../Views/TelasIniciais/TelaCadernos'
+import TC from '../Views/TelasCamada2/TelaDoCaderno'
+import TCC from '../Views/TelasDeCadastro/CadastrarCaderno'
+import TMs from '../Views/TelasIniciais/TelaMaterias';
+import TM from '../Views/TelasCamada2/TelaDaMateria'
+import TCM from '../Views/TelasDeCadastro/CadastrarMateria'
+import TT from '../Views/TelasIniciais/TelaTarefa';
+import TP from '../Views/TelasIniciais/TelaPerfil'
+import TCT from '../Views/TelasDeCadastro/CadastrarTarefa'
 import { TabButtonCaderno, TabButtonHome, TabButtonMateria, TabButtonPerfil, TabButtonTarefa } from '../Components/TabButton'
+import TelaCaderno from '../Views/TelasIniciais/TelaCadernos';
 
 const Tab = createBottomTabNavigator();
+
+const CadernoStack= createStackNavigator();
+
+function Caderno(){
+  return (
+    <CadernoStack.Navigator initialRouteName="Tela Cadernos" screenOptions={{headerShown:false}}>
+      <CadernoStack.Screen name="Tela Cadernos" component={TCs}  />
+      <CadernoStack.Screen name="Tela Caderno" component={TC} />
+      <CadernoStack.Screen name="Tela Cadastrar Caderno" component={TCC} />
+    </CadernoStack.Navigator>
+  );
+}
+
+const MateriaStack= createStackNavigator();
+
+function Materia(){
+  return (
+    <MateriaStack.Navigator initialRouteName="Tela Materias" screenOptions={{headerShown:false}}>
+      <MateriaStack.Screen name="Tela Materias" component={TMs} />
+      <MateriaStack.Screen name="Tela Materia" component={TM} />
+      <MateriaStack.Screen name="Tela Cadastrar Materia" component={TCM}  />
+    </MateriaStack.Navigator>
+  );
+}
+
+
 
 export default function MyTab() {
   return (
@@ -19,7 +52,7 @@ export default function MyTab() {
         tabBarShowLabel: false,
       }}
     >
-      <Tab.Screen name="Cadernos" component={TC}
+      <Tab.Screen name="Cadernos" component={Caderno}
         options={{
           tabBarIcon: ({ focused }) => (
             <TabButtonCaderno ativo={focused} />
@@ -27,7 +60,7 @@ export default function MyTab() {
         }}
       />
 
-      <Tab.Screen name="Matérias" component={TM}
+      <Tab.Screen name="Matérias" component={Materia}
         options={{
           tabBarIcon: ({ focused }) => (
             <TabButtonMateria ativo={focused} />
@@ -47,7 +80,8 @@ export default function MyTab() {
         options={{
           tabBarIcon: ({ focused }) => (
             <TabButtonTarefa ativo={focused} />
-          )
+          ),
+          tabBarBadge:'!'
         }}
       />
 
@@ -63,54 +97,3 @@ export default function MyTab() {
   )
 }
 
-/*const Drawer = createDrawerNavigator();
-
-export default function MyDrawer() {
-  return (
-
-    <Drawer.Navigator initialRouteName='Aulas'
-      screenOptions={{
-        drawerStyle: { backgroundColor: "#181818", width: 180,marginBottom:-20},
-        drawerActiveTintColor: "#0BF0FF",
-        drawerInactiveTintColor: "#fff",
-        drawerActiveBackgroundColor: "#1818ff",
-        drawerHideStatusBarOnOpen: true,
-        drawerLabelStyle:{fontSize:17,fontWeight:'bold',height:19},
-      }}>
-
-      <Drawer.Screen name="Aulas" component={TI}
-        options={{
-          drawerIcon: ({ focused }) => (
-            focused ? <IHA width={25} height={25} style={{ marginRight: -23 }} /> :
-              <IH width={25} height={25} style={{ marginRight: -23 }} />
-          )
-        }} />
-
-      <Drawer.Screen name="Matérias" component={TM}
-        options={{
-          drawerIcon: ({ focused }) => (
-            focused ? <IMA width={25} height={25} style={{ marginRight: -23 }} /> :
-              <IM width={25} height={25} style={{ marginRight: -23 }} />
-          )
-        }} />
-
-      <Drawer.Screen name="Cadernos" component={TC}
-        options={{
-          drawerIcon: ({ focused }) => (
-            focused ? <ICA width={25} height={25} style={{ marginRight: -23 }} /> :
-              <IC width={25} height={25} style={{ marginRight: -23 }} />
-          ),
-        }} />
-
-      <Drawer.Screen name="Tarefas" component={TT}
-        options={{
-          drawerIcon: ({ focused }) => (
-            focused ? <ITA width={25} height={25} style={{ marginRight: -23 }} /> :
-              <IT width={25} height={25} style={{ marginRight: -23 }} />
-          )
-        }} />
-
-    </Drawer.Navigator>
-  );
-}
-*/
