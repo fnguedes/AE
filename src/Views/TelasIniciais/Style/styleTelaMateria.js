@@ -8,7 +8,7 @@ export default StyleSheet.create({
   materias:{
     flex:1,
     flexWrap:'wrap',
-    justifyContent:'space-evenly',
+    justifyContent:'flex-start',
     flexDirection:'row',
     marginTop:'6%'
   }

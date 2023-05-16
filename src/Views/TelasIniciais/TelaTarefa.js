@@ -1,11 +1,19 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import style from './Style/styleTelaTarefa'
-import PostIt from '../../Components/MateriaPostIt'
+import Header from '../../Components/Header'
+import Tarefa from '../../Components/Tarefa'
 export default function TelaTarefa() {
   return (
     <View style={style.container}>
-      <Text>TelaTarefa</Text>
+      <Header>Tarefas</Header>
+
+      <View style={style.tarefas}>
+        <Tarefa />
+        <Tarefa />
+        <Tarefa />
+      </View>
+
     </View>
   )
 }

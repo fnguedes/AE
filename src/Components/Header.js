@@ -10,6 +10,7 @@ export default function Header({children}) {
       <View style={style.containerTitulo} >
         <Text style={style.txtTitulo}>{children}</Text>
       </View>
+      <View style={style.linha} ></View>
     </SafeAreaView>
     
   )

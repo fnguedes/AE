@@ -1,5 +1,89 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet,Dimensions} from 'react-native'
 
 export default StyleSheet.create({
-  
+  container:{
+    width:'40%',
+    height:Dimensions.get('screen').height/7,
+    backgroundColor:'#5ED2E3',
+    borderRadius:20,
+    margin:'5%',
+  },
+  containerTop:{
+    width:'120%',
+    height:'1%',
+    alignSelf:'center',
+    flexDirection:'row',
+    alignItems:'center'
+  },
+  containerSigla:{
+    width:Dimensions.get('screen').width/10,
+    height:Dimensions.get('screen').width/10,
+    backgroundColor:'#5ED2E3',
+    borderRadius:50,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  borda:{
+    height:'95%',
+    width:'95%',
+    borderWidth:1,
+    borderRadius:50,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  sigla:{
+    fontWeight:'bold'
+  },
+  espace:{
+    width:'62%',
+  },
+  containerTitulo:{
+    width:'100%',
+    height:'16%',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  txtTitulo:{
+    fontWeight:'800',
+    fontSize:14
+  },
+  lixo:{
+    width:Dimensions.get('screen').width/14,
+    height:Dimensions.get('screen').width/14,
+    backgroundColor:'#f00',
+    borderRadius:50,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  containerDescricao:{
+    width:'100%',
+    height:'63%',
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:'3%'
+  },
+  descricao:{
+    width:'85%',
+    height:'100%',
+    backgroundColor:'#fff',
+    borderRadius:20
+  },
+  txtDescricao:{
+    flex:1,
+    padding:5,
+    fontSize:12,
+    textAlign:'center',
+    textAlignVertical:'center'
+
+  },
+  containerData:{
+    width:'100%',
+    height:'16%',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  txtData:{
+    fontSize:12
+
+  }
 })

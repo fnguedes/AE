@@ -13,7 +13,6 @@ export default function TelaMaterias() {
       <Materia/>
       <Materia/>
       <Materia/>
-      <Materia/>
       </View>
     </View>
   )
