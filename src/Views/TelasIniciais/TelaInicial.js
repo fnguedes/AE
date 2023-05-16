@@ -8,7 +8,7 @@ export default function TelaInicial() {
   return (
     <View style={style.container}>
       <StatusBar hidden={false}/>
-      <Header/>
+      <Header>Horário</Header>
       <TopTab/>
       
     </View>

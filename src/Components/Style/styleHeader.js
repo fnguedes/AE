@@ -4,7 +4,9 @@ export default StyleSheet.create({
     container: {
         backgroundColor: "#181818",
         width:'100%',
-        height:'7%'
+        height:'8%',
+        borderBottomWidth:1,
+        borderColor:'#fff'
     },
     containerDias: {
         backgroundColor: "#0f0",
@@ -17,7 +19,8 @@ export default StyleSheet.create({
     containerTitulo:{
         flex:1,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        marginTop:15
     },
     txtTitulo:{
         fontSize:24,
