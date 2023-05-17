@@ -1,25 +1,65 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet,Dimensions } from "react-native";
 
 export default StyleSheet.create({
   container:{
-    
+    width:'40%',
+    height:Dimensions.get('screen').height/8,
+    backgroundColor:'#5ED2E3',
+    borderRadius:20,
+    margin:'5%'
   },
   containerTop:{
-
+    width:'100%',
+    height:'25%',
+    flexDirection:'row'
   },
   sigla:{
-
+    width:'27%',
+    height:'100%',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  txtSigla:{
+    fontSize:13,
+    fontWeight:'bold'
   },
   titulo:{
-
+    width:'53%',
+    height:'100%',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  txtTitulo:{
+    fontSize:13,
+    fontWeight:'700'
+  },
+  containerLixo:{
+    width:'114%',
+    height:'1%',
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    alignItems:'center',
+    alignSelf:'center'
   },
   lixo:{
-
-  },
-  containerDescricao:{
-
+    width:Dimensions.get('screen').width/14,
+    height:Dimensions.get('screen').width/14,
+    borderRadius:50,
+    backgroundColor:'#f00'
   },
   descricao:{
-
+    width:'100%',
+    height:'74%',
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'#fff',
+    borderBottomRightRadius:20,
+    borderBottomLeftRadius:20
+  },
+  txtDescricao:{
+    padding:10,
+    textAlign:'center',
+    textAlignVertical:'center',
+    fontSize:11
   }
 })

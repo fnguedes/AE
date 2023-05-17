@@ -4,5 +4,12 @@ export default StyleSheet.create({
   container:{
     backgroundColor:"#181818",
     flex:1
+  },
+  cadernos:{
+    flex:1,
+    flexWrap:'wrap',
+    justifyContent:'flex-start',
+    flexDirection:'row',
+    marginTop:'6%'
   }
 })
